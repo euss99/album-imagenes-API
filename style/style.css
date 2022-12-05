@@ -1,0 +1,231 @@
+/* ====  General ==== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+}
+
+/* ====  Navegador ==== */
+nav {
+    width: 100%;
+    height: 40px;
+    background-color: black;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    margin-right: 32px;
+    font-size: 18px;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* ====  Sección de imágenes aleatorias ==== */
+h1 {
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding: 22px 32px 12px 32px;
+    font-size: 38px;
+}
+
+body p {
+    padding: 0 32px 6px 32px;
+    text-align: center;
+    margin: 0;
+    font-size: 20px;
+}
+
+#randomImg {
+    padding: 0 32px 12px 32px;
+}
+
+#randomImg h2 {
+    font-size: 28px;
+    margin: 0;
+    padding: 12px 0;
+}
+
+#randomImg article {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#randomImg article img {
+    width: 450px;
+    margin-bottom: 12px;
+    border-radius: 4px;
+}
+
+#randomImg article button {
+    width: 200px;
+    height: 30px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 0;
+}
+
+#randomImg article button:nth-child(1) {
+    background-color: green;
+}
+
+/* ====  Uploding imágenes ==== */
+#uploadingImg {
+    padding: 0 32px 12px 32px;
+}
+
+#uploadingImg h2 {
+    font-size: 28px;
+    margin: 0;
+    padding: 12px 0;
+}
+
+#uploadingForm {
+    width: 80%;
+    text-align: center;
+    border: 1px dotted black;
+    border-radius: 4px;
+    margin: 0 auto;
+    padding: 12px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#uploadingForm img {
+    text-align: center;
+    width: 250px;
+    margin-bottom: 6px;
+}
+
+.fancy-file{
+    display: none;
+}
+
+.fancy-file + label{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 6px;
+    flex: 1;
+}
+
+.fancy-file__button {
+    background: green url(./icon-folder.png) 20px center/25px no-repeat;
+    color: white;
+    white-space: nowrap;
+    width: 200px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#uploadingForm button {
+    width: 150px;
+    height: 30px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 0;
+}
+
+/* Save favorites section */
+#favoritesImg {
+    padding: 0 32px 12px 32px;
+    margin-bottom: 6px;
+}
+
+#favoritesImg div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+    grid-auto-rows: 250px;
+    gap: 25px;
+    justify-content: center;
+}
+
+#favoritesImg h2 {
+    font-size: 28px;
+    margin: 0;
+    padding: 12px 0;
+}
+
+#favoritesImg article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+}
+
+#favoritesImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 6px;
+}
+
+#favoritesImg button {
+    width: 175px;
+    height: 30px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 0;
+}
+
+
+/* Responsive */
+@media (max-width: 600px) {
+    nav {
+        justify-content: center;
+    }
+    a {
+        margin: 0 16px;
+    }
+    #randomImg h2 {
+        text-align: center;
+    }
+    #randomImg article img {
+        width: 85%;
+    }
+    .section-btn {
+        display: flex;
+        flex-direction: column;
+    }
+    #randomImg article button {
+        width: 200px;
+        height: 30px;
+        margin-bottom: 8px;
+    }
+}
+
+@media (max-width: 400px) {
+    #uploadingForm img {
+        width: 90%;
+    }
+}

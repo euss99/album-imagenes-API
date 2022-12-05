@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Galería de imágenes</title>
+</head>
+<body>
+    <nav class="my-info">
+        <a href="">Sobre mí</a>
+        <a href="">GitHub</a>
+        <a href="">Linkedin</a>
+    </nav>
+
+    <h1>Galería de imágenes de gatos</h1>
+    <p>Esta página es una galería para que puedas seleccionar las mejores fotos de gatos que consideres y agregarla a la sección de imágenes favoritas, así como subir sus fotos preferidas.</p>
+
+    <span id="error"></span>
+
+    <section id="randomImg">
+        <h2>Imagenes de gatos aleatorias</h2>
+
+        <article>
+            <img id="img-1" height="auto" alt="Foto de un gato aleatorio">
+            <div class="section-btn">
+                <button id="btnAddFavorite1">
+                    Agregar a favoritos
+                </button>
+                <button onclick="loadRandomImg()" id="btn"> 
+                    Nueva imágen
+                </button>
+            </div>
+        </article>
+
+    </section>
+
+    <section id="uploadingImg">
+        <h2>Sube la imágen de gato</h2>
+
+        <form id="uploadingForm">
+            <img id="img-photo">
+            <input id="file" class="fancy-file" type="file" name="file" onchange="vistaPreliminar(event)" />
+            <label for="file">
+                <span class="fancy-file__button">
+                    Buscar archivo
+                </span>
+            </label>
+            <button type="button" onclick="upLoadImg()">Subir imágen</button>
+        </form>
+    </section>
+
+    <section id="favoritesImg">
+        <h2>Imagenes de gatos favoritas</h2>
+        <p id="text"></p>
+        
+        <div id="gallery-container">
+        </div>
+        <!-- Manipulación del DOM en JS -->
+    </section>
+
+    <!-- Importando axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./src/main.js"></script>
+</body>
+</html>
